@@ -86,6 +86,11 @@
       "itemOffered": {
        "@type": "Service",
        "name": "Tax return preparation for content creators"
+      },
+      "priceSpecification": {
+       "@type": "PriceSpecification",
+       "minPrice": 225,
+       "priceCurrency": "USD"
       }
      },
      {
@@ -124,7 +129,8 @@
       }
      }
     ]
-   }
+   },
+   "priceRange": "From $225"
   },
   {
    "@type": "Person",
@@ -183,6 +189,14 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Federal estimated tax payments are generally due April 15, June 15, September 15, and January 15 of the following year. If a date falls on a weekend or holiday, the deadline moves to the next business day."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much do you charge for a creator tax return?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Creator tax returns start at $225. Your final price depends on how many income streams and tax forms you have, how organized your records are, any state returns, and the review needed to make sure your return is accurate. You'll know your price before we start."
      }
     },
     {
@@ -341,6 +355,16 @@ details p{margin:12px 0 0;color:var(--muted)}
 .to-top svg{width:24px;height:24px}
 @media (max-width:600px){.to-top{right:24px;bottom:88px;width:44px;height:44px}}
 .foot-links a{color:var(--soft)}.foot-links a:hover{color:var(--navy)}
+.price-box{display:flex;flex-wrap:wrap;gap:24px}
+.price-main{flex:1 1 300px;background:var(--navy);color:#fff;padding:36px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.price-label{font-weight:700;font-size:18px;color:#D6E2EF}
+.price{font-family:'Archivo',sans-serif;font-weight:800;font-size:72px;line-height:1;letter-spacing:-2px}
+.price-main p{margin:0;color:#D6E2EF;font-size:17px}
+.price-main .btn{background:#fff;color:var(--navy);margin-top:8px}
+.price-main .btn:hover{background:var(--accent);color:var(--navy)}
+.price-factors{flex:2 1 420px;background:#fff;border:1px solid var(--line);padding:32px}
+.price-factors h3{font-size:20px;margin-bottom:16px}
+.price-factors ul.check{grid-template-columns:1fr}
 footer{padding:32px 0 96px;font-size:15px;color:var(--soft)}
 footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
 .foot-social{gap:20px}
@@ -358,6 +382,7 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:ce
 <div class="navlinks">
 <a href="#services">Services</a>
 <a href="#how">How it works</a>
+<a href="#pricing">Pricing</a>
 <a href="#about">About</a>
 <a href="#reviews">Reviews</a>
 <a href="#faq">FAQ</a>
@@ -468,6 +493,35 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:ce
 </div>
 </section>
 
+<section id="pricing">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">💵 Pricing</span>
+<h2>How much does creator tax preparation cost?</h2>
+<p>Simple, honest pricing. No surprises.</p>
+</div>
+<div class="price-box">
+<div class="price-main">
+<span class="price-label">Creator tax returns start at</span>
+<span class="price">$225</span>
+<p>Every creator's situation is different, so your final price depends on how much work your return needs. You'll know your price before we start.</p>
+<a class="btn" href="https://form.jotform.com/253648427878879" target="_blank" rel="noopener">Get your free quote</a>
+</div>
+<div class="price-factors">
+<h3>What can change the price</h3>
+<ul class="check">
+<li>How many income streams you have (AdSense, brand deals, affiliates, tips, and more)</li>
+<li>How many 1099 forms and platform reports we need to review</li>
+<li>Whether your income and expenses are organized or need cleanup</li>
+<li>State returns, or income in more than one state</li>
+<li>Catching up on past years or responding to IRS letters</li>
+<li>The review we're required to do to make sure your return is accurate and complete (called "due diligence")</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
 <section id="about">
 <div class="wrap about">
 <img src="ruben-headshot.jpg" alt="Ruben Perez, tax advisor for content creators" width="260" height="260" loading="lazy">
@@ -509,6 +563,7 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:ce
 <details><summary>What tax forms do content creators receive?</summary><p>Common forms are the 1099-NEC from brands that paid you, the 1099-MISC from some platforms, and the 1099-K from payment apps and platforms. You must report all income, even if you never receive a form for it.</p></details>
 <details><summary>How much should a creator set aside for taxes?</summary><p>Many creators set aside 25% to 30% of their net income for federal, state, and self-employment taxes. The right amount depends on your income, deductions, and state, so we calculate your actual number.</p></details>
 <details><summary>When are quarterly estimated taxes due?</summary><p>Federal estimated tax payments are generally due April 15, June 15, September 15, and January 15 of the following year. If a date falls on a weekend or holiday, the deadline moves to the next business day.</p></details>
+<details><summary>How much do you charge for a creator tax return?</summary><p>Creator tax returns start at $225. Your final price depends on how many income streams and tax forms you have, how organized your records are, any state returns, and the review needed to make sure your return is accurate. You'll know your price before we start.</p></details>
 <details><summary>I only made a little money. Do I still have to report it?</summary><p>All income is reportable, whether or not you receive a 1099. If your net self-employment earnings are $400 or more, you generally owe self-employment tax and need to file.</p></details>
 <details><summary>Are gifted products really taxable?</summary><p>Products or services you receive in exchange for content or promotion are generally treated as income at their fair market value. We'll help you figure out what applies to you.</p></details>
 <details><summary>Do I need an LLC?</summary><p>Not necessarily. An LLC can offer liability protection, but it doesn't change your taxes by itself. We'll walk through whether it, or an S-corp election, makes sense at your income level.</p></details>

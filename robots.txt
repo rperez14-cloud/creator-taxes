@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rperez14-cloud.github.io/creator-taxes/sitemap.xml
+Sitemap: https://creatortaxpro.com/sitemap.xml

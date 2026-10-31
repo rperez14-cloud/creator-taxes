@@ -378,6 +378,11 @@ details p{margin:12px 0 0;color:var(--muted)}
 .fit-card ul{margin:0;padding-left:20px}
 .fit-card li{color:var(--muted);margin-bottom:10px}
 .fit-note{margin:18px 0 0;color:var(--muted);font-size:17px}
+.deadline{background:#FFF4D6;border-bottom:1px solid #F0D58A;position:relative}
+.deadline p{max-width:1120px;margin:0 auto;padding:12px 56px 12px 24px;font-size:16px;color:#4A3B12;text-align:center}
+.deadline a{color:#1E3A5F;font-weight:700;white-space:nowrap}
+.deadline-x{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:0;font-size:24px;line-height:1;color:#7A6420;cursor:pointer;padding:6px 10px}
+.deadline-x:hover{color:#1A1A1A}
 footer{padding:32px 0 96px;font-size:15px;color:var(--soft)}
 footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
 .foot-social{gap:20px}
@@ -388,6 +393,11 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:ce
 </head>
 <body>
 
+<!-- Deadline banner: edit the date + text each quarter, or delete this block. Auto-hides after data-expires. -->
+<div class="deadline" id="deadline" data-expires="2027-01-16">
+<p>📅 <b>Heads up:</b> The next estimated tax payment is due <b>January 15, 2027</b>. Not sure how much to pay? <a href="https://form.jotform.com/253648427878879" target="_blank" rel="noopener">Get a free consultation →</a></p>
+<button type="button" class="deadline-x" aria-label="Close this message">×</button>
+</div>
 <header>
 <div class="wrap">
 <nav>
@@ -665,6 +675,11 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:ce
 <a class="to-top" href="#" aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 5.5l7 7-1.4 1.4-4.6-4.6V20h-2V9.3l-4.6 4.6L5 12.5z"/></svg></a>
 <script>
 (function(){var b=document.querySelector('.to-top');function t(){b.classList.toggle('show',window.scrollY>600)}window.addEventListener('scroll',t,{passive:true});t();b.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})})})();
+</script>
+<script>
+(function(){var d=document.getElementById('deadline');if(!d)return;var exp=new Date(d.getAttribute('data-expires')+'T00:00:00');var closed=false;try{closed=sessionStorage.getItem('deadlineClosed')==='1'}catch(e){}
+if(new Date()>=exp||closed){d.remove();return}
+d.querySelector('.deadline-x').addEventListener('click',function(){d.remove();try{sessionStorage.setItem('deadlineClosed','1')}catch(e){}})})();
 </script>
 </body>
 </html>

@@ -396,6 +396,15 @@ footer .wrap{display:flex;flex-direction:column;align-items:center;text-align:ce
 .foot-copy{font-weight:600;color:var(--muted)}
 .foot-note{font-size:14px;max-width:720px}
 </style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LK899YWN09"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-LK899YWN09');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a');if(!a)return;var h=a.getAttribute('href')||'',ev=null;
+if(h.indexOf('form.jotform.com')>-1)ev='book_consultation_click';else if(h.indexOf('wa.me')>-1)ev='whatsapp_click';else if(h.indexOf('tel:')===0)ev='phone_click';else if(h.indexOf('mailto:')===0)ev='email_click';else if(a.hasAttribute('hreflang'))ev='language_switch';
+if(ev)gtag('event',ev,{link_text:(a.textContent||'').trim().slice(0,80),page_language:document.documentElement.lang});});
+</script>
 </head>
 <body>
 
